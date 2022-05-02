@@ -1,0 +1,73 @@
+<view class="page">
+  <form onSubmit="onSubmit" onReset="onReset">
+    <view class="page-section">
+      <view class="form-row">
+        <view class="form-row-label">价格范围</view>
+        <view class="form-row-content">
+          <input name="value_min" type="number" class="input" placeholder="min" value="1" />
+        </view>
+        <view class="form-row-content">
+          <input name="value_max" type="number" class="input" placeholder="max" value="150"/>
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">折价率范围</view>
+        <view class="form-row-content">
+          <input name="trans_ratio_min" type="number" class="input" placeholder="min" value="-100" />
+        </view>
+        <view class="form-row-content">
+          <input name="trans_ratio_max" type="number" class="input" placeholder="max" value="100"/>
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">日期</view>
+        <view class="form-row-content">
+          <input name="date_y" type="number" class="input" placeholder="年" value="{{year}}"/>
+        </view>
+        <view class="form-row-content">
+          <input name="date_m" type="number" class="input" placeholder="月" value="{{month}}"/>
+        </view>
+        <view class="form-row-content">
+          <input name="date_d" type="number" class="input" placeholder="日" value="{{day}}"/>
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <picker onChange="bindPickerChange" value="{{index}}" range="{{array}}" name="order">
+        <view class="row">
+          <view class="row-title">排序键</view>
+          <view class="row-extra">当前选择：{{array[index]}}</view>
+          <image class="row-arrow" src="https://img.alicdn.com/tfs/TB1oVprf4vbeK8jSZPfXXariXXa-48-48.png" mode="aspectFill" />
+        </view>
+      </picker>
+      <view class="form-row">
+        <view class="form-row-label">是否倒序</view>
+        <view class="form-row-content" style="text-align: right">
+          <switch name="switch" />
+        </view>
+      </view>
+      <view>
+        <button class="yellow" form-type="submit" type="primary">submit</button>
+        <button form-type="reset">reset</button>
+      </view>
+    </view>
+  </form>
+  <view a:if="{{listData.length > 0}}" class="table">
+    <view class="tr bg-header">
+      <view class="th">债券名</view>
+      <view class="th">价格</view>
+      <view class="th">折价率</view>
+      <view class="th">可转股</view>
+      <view class="th">外链</view>
+    </view>
+    <block a:for="{{listData}}" a:key="{{code}}">
+      <view class="tr bg-items">
+        <view class="td">{{item.SECURITY_NAME_ABBR}}</view>
+        <view class="td">{{item.CURRENT_BOND_PRICE}}</view>
+        <view class="td">{{item.TRANSFER_PREMIUM_RATIO}}</view>
+        <view class="td">{{item.CAN_TRANS}}</view>
+        <view class="td"><button class='mini-button' data-ref="{{item.EastMoneyLink}}" onTap="onClickDC">东财</button></view>
+      </view>
+    </block>
+  </view>
+</view>

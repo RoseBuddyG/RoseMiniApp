@@ -6,6 +6,8 @@
     "page/component/canvas/canvas",
     "page/component/checkbox/checkbox",
     "page/component/form/form",
+    "page/component/trend/trend",
+    "page/component/kzz/kzz",
     "page/component/icon/icon",
     "page/component/image/image",
     "page/component/input/input",

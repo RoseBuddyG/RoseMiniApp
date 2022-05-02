@@ -1,0 +1,126 @@
+button + button {
+  margin-top: 32rpx;
+}
+
+.yellow {
+  background-color: #FCBE56;
+  border-width: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.gray {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+}
+
+.row-title {
+  flex: 1;
+  padding-top: 28rpx;
+  padding-bottom: 28rpx;
+  font-size: 34rpx;
+  color: #000;
+}
+
+.row-extra {
+  flex-basis: initial;
+  font-size: 32rpx;
+  color: #888;
+}
+
+.row-arrow {
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 16rpx;
+}
+
+.wrapper {
+  padding: 20rpx;
+}
+
+.table {
+  border-style: solid;
+  border-width: 0rpx;
+  margin-left: 0rpx;
+  margin-right: 0rpx;
+  border-color: #8A8A8A;
+}
+
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 1rem;
+  align-items: center;
+}
+
+.td {
+  width: 40%;
+  justify-content: center;
+  text-align: center;
+}
+
+.bg-header {
+  background: #FFE4B5;
+}
+
+.bg-items {
+  background: #E6F3F9;
+}
+
+.th {
+  width: 40%;
+  color: #080808;
+  display: inline-block;
+  text-align: center;
+}
+
+.mini-button {
+  font-size: small;
+  color: grey;
+  background-color: #E6F3F9;
+  border-width: 0;
+  border-radius: 20%;
+}
+
+ff-canvas {
+  width: 100%;
+}
+
+.red {
+  color: #d44151;
+}
+
+.green {
+  color: #097045;
+}
+
+.secondary {
+  color: #5e5e5e;
+}
+
+.top-padding {
+  padding-top: 8rpx;
+}
+
+.detail-title {
+  font-size: 32rpx;
+  text-align: center;
+  border-bottom: 1rpx solid rgb(221, 221, 221);
+  padding: 20rpx 0;
+}
+
+.blue-text {
+  color: #5079d1;
+}
+
+.f2-chart {
+  width: 100%;
+  height: 500rpx;
+}

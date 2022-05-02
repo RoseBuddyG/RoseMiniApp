@@ -79,7 +79,11 @@
       </view>
       <view>
         <button class="yellow" form-type="submit" type="primary">submit</button>
-        <button class="gray" form-type="reset" >reset</button>
+        <view class="page-section-btns">
+          <button class="gray"  form-type="reset" >reset</button>
+          <button class="gray"  onTap="onClick" >clear</button>
+        </view>
+        
       </view>
     </view>
   </form>
@@ -103,6 +107,9 @@
         <view a:if="{{listData[0].cross_date > 0}}" class="td">{{item.cross_date}}</view>
         <view class="td"><button class='mini-button' data-ref="{{item.eastmoney_link}}" onTap="onClickDC">东财</button></view>
         <!-- <view class="td"><button class='mini-button' data-ref="{{item.iwencai_link}}" onTap="onClickDC">爱问财</button></view> -->
+      </view>
+      <view class="f2-chart">
+        <f2 onInit="onInitChart" opts="{{item.price_info}}"></f2>
       </view>
     </block>
   </view>

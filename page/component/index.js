@@ -50,85 +50,30 @@ Page({
         }, {
           icon: '/image/stock_arise.png',
           title: '趋势筛选',
-          entitle: 'Basic Content',
-          subs: [
-            {
-              title: '文字',
-              entitle: 'Text',
-              page: 'text',
-            },
-            {
-              title: '图标',
-              entitle: 'Icon',
-              page: 'icon',
-            },
-            {
-              title: '进度条',
-              entitle: 'Progress',
-              page: 'progress',
-            },
-          ],
+          entitle: 'Trend',
+          page: 'trend',
+          // subs: [
+          //   {
+          //     title: '文字',
+          //     entitle: 'Text',
+          //     page: 'text',
+          //   },
+          //   {
+          //     title: '图标',
+          //     entitle: 'Icon',
+          //     page: 'icon',
+          //   },
+          //   {
+          //     title: '进度条',
+          //     entitle: 'Progress',
+          //     page: 'progress',
+          //   },
+          // ],
         }, {
           icon: '/image/bond.png',
           title: '可转债',
-          entitle: 'Form',
-          subs: [
-            {
-              title: '按钮',
-              entitle: 'Button',
-              page: 'button',
-            },
-            {
-              title: '复选框',
-              entitle: 'Checkbox',
-              page: 'checkbox',
-            },
-            {
-              title: '表单',
-              entitle: 'Form',
-              page: 'form',
-            },
-            {
-              title: '文本输入',
-              entitle: 'Input',
-              page: 'input',
-            },
-            {
-              title: '标签',
-              entitle: 'Label',
-              page: 'label',
-            },
-            {
-              title: '选择器视图',
-              entitle: 'PickerView',
-              page: 'picker-view',
-            },
-            {
-              title: '选择器',
-              entitle: 'Picker',
-              page: 'picker',
-            },
-            {
-              title: '单选框',
-              entitle: 'Radio',
-              page: 'radio',
-            },
-            {
-              title: '滑动条',
-              entitle: 'Slider',
-              page: 'slider',
-            },
-            {
-              title: '开关',
-              entitle: 'Switch',
-              page: 'switch',
-            },
-            {
-              title: '多行输入',
-              entitle: 'Textarea',
-              page: 'textarea',
-            },
-          ],
+          entitle: 'Kzz',
+          page: 'kzz',
         }, {
           icon: '/image/catch.png',
           title: 'A股打新',
