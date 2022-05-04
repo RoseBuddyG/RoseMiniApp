@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "趋势筛选",
+  "usingComponents": {
+    "f2": "@antv/my-f2"
+  }
+}

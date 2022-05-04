@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "价格低估型",
+  "usingComponents": {
+    "f2": "@antv/my-f2"
+  }
+}
