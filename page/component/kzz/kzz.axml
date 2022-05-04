@@ -58,6 +58,9 @@
       <view class="th">价格</view>
       <view class="th">折价率</view>
       <view class="th">可转股</view>
+      <view class="th">结息</view>
+      <view class="th">评级</view>
+      <view class="th">过期日</view>
       <view class="th">外链</view>
     </view>
     <block a:for="{{listData}}" a:key="{{code}}">
@@ -66,6 +69,9 @@
         <view class="td">{{item.CURRENT_BOND_PRICE}}</view>
         <view class="td">{{item.TRANSFER_PREMIUM_RATIO}}</view>
         <view class="td">{{item.CAN_TRANS}}</view>
+        <view class="td">{{item.INTEREST}}</view>
+        <view class="td">{{item.RATING}}</view>
+        <view class="td">{{item.EXPIRE_DATE}}</view>
         <view class="td"><button class='mini-button' data-ref="{{item.EastMoneyLink}}" onTap="onClickDC">东财</button></view>
       </view>
     </block>
