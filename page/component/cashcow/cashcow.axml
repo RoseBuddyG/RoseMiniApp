@@ -1,0 +1,40 @@
+<view class="page">
+  <form onSubmit="onSubmit" onReset="onReset">
+    <view class="page-section">
+      <view class="form-row">
+        <view class="form-row-label">派息次数</view>
+        <view class="form-row-content">
+          <input name="count" type="number" class="input" placeholder="最大结果数" value="8"/>
+        </view>
+      </view>
+      <view>
+        <button class="yellow" form-type="submit" type="primary">submit</button>
+        <button class="gray" form-type="reset" >reset</button>
+      </view>
+    </view>
+  </form>
+  <view a:if="{{listData.length > 0}}" class="table">
+    <view class="tr bg-header">
+      <view class="th">公司名</view>
+      <view class="th">均息</view>
+      <view class="th">总息</view>
+      <view class="th">息次</view>
+      <view class="th">融资</view>
+      <view class="th">融次</view>
+      <view class="th">详情</view>
+      <view class="th">外链</view>
+    </view>
+    <block a:for="{{listData}}" a:key="{{code}}">
+      <view class="tr bg-items">
+        <view class="td">{{item.Company}}</view>
+        <view class="td">{{item.AvgDividend}}</view>
+        <view class="td">{{item.TotalDividend}}</view>
+        <view class="td">{{item.DividendCount}}</view>
+        <view class="td">{{item.Financing}}</view>
+        <view class="td">{{item.FinancingCount}}</view>
+        <view class="td"><button class='mini-button' data-ref="{{item.Detail}}" onTap="onClickDC">详情</button></view>
+        <view class="td"><button class='mini-button' data-ref="{{item.EastMoneyLink}}" onTap="onClickDC">东财</button></view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,62 @@
+<view class="page">
+  <form onSubmit="onSubmit" onReset="onReset">
+    <view class="page-section">
+      <view class="form-row">
+        <view class="form-row-label">年份</view>
+        <view class="form-row-content">
+          <input name="year" type="number" class="input" placeholder="最大结果数" value="{{year}}"/>
+        </view>
+      </view>
+      <picker onChange="bindPickerChange" value="{{secIndex}}" range="{{secArray}}" name="quarter">
+        <view class="row">
+          <view class="row-title">季度</view>
+          <view class="row-extra">当前选择：{{secArray[secIndex]}}</view>
+          <image class="row-arrow" src="https://img.alicdn.com/tfs/TB1oVprf4vbeK8jSZPfXXariXXa-48-48.png" mode="aspectFill" />
+        </view>
+      </picker>
+      <picker onChange="bindPickerChange" value="{{index}}" range="{{array}}" name="order">
+        <view class="row">
+          <view class="row-title">排序键</view>
+          <view class="row-extra">当前选择：{{array[index]}}</view>
+          <image class="row-arrow" src="https://img.alicdn.com/tfs/TB1oVprf4vbeK8jSZPfXXariXXa-48-48.png" mode="aspectFill" />
+        </view>
+      </picker>
+      <view class="form-row">
+        <view class="form-row-label">是否倒序</view>
+        <view class="form-row-content" style="text-align: right">
+          <switch name="switch" />
+        </view>
+      </view>
+      <view>
+        <button class="yellow" form-type="submit" type="primary">submit</button>
+        <button class="gray" form-type="reset" >reset</button>
+      </view>
+    </view>
+  </form>
+  <view a:if="{{listData.length > 0}}" class="table">
+    <view class="tr bg-header">
+      <view class="th">公司名</view>
+      <view class="th">营收</view>
+      <view class="th">利润</view>
+      <view class="th">roe</view>
+      <view class="th">平均营增</view>
+      <view class="th">平均利增</view>
+      <view class="th">营增</view>
+      <view class="th">利增</view>
+      <view class="th">外链</view>
+    </view>
+    <block a:for="{{listData}}" a:key="{{code}}">
+      <view class="tr bg-items">
+        <view class="td">{{item.Company}}</view>
+        <view class="td">{{item.Income}}</view>
+        <view class="td">{{item.Profit}}</view>
+        <view class="td">{{item.Roe}}</view>
+        <view class="td">{{item.IncomeAvgIncrease5}}</view>
+        <view class="td">{{item.ProfitAvgIncrease5}}</view>
+        <view class="td">{{item.IncomeIncrease}}</view>
+        <view class="td">{{item.ProfitIncrease}}</view>
+        <view class="td"><button class='mini-button' data-ref="{{item.EastMoneyLink}}" onTap="onClickDC">东财</button></view>
+      </view>
+    </block>
+  </view>
+</view>

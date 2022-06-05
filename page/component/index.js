@@ -49,9 +49,9 @@ Page({
           // ],
         }, {
           icon: '/image/stock_arise.png',
-          title: '趋势筛选',
-          entitle: 'Trend',
-          page: 'trend',
+          title: '成长股',
+          entitle: 'Growth',
+          page: 'growth',
           // subs: [
           //   {
           //     title: '文字',
@@ -76,30 +76,9 @@ Page({
           page: 'kzz',
         }, {
           icon: '/image/catch.png',
-          title: 'A股打新',
-          entitle: 'Feedback',
-          subs: [
-            {
-              title: '动作面板',
-              entitle: 'ActionSheet',
-              page: 'action-sheet',
-            },
-            {
-              title: '对话框',
-              entitle: 'Modal',
-              page: 'modal',
-            },
-            {
-              title: '轻提示',
-              entitle: 'Toast',
-              page: 'toast',
-            },
-            {
-              title: '加载提示',
-              entitle: 'Loading',
-              page: 'loading',
-            },
-          ],
+          title: '现金奶牛',
+          entitle: 'CashCow',
+          page: 'cashcow'
         }, 
       ],
     },
